@@ -1,0 +1,50 @@
+.header-wrapper .navbar {
+  padding: 15px 0;
+  transition: all 0.2s linear;
+}
+
+.header-wrapper .navbar-brand img {
+  max-width: 40px;
+  height: auto;
+}
+
+.header-wrapper .navbar-toggler {
+  border: 0;
+}
+
+.header-wrapper .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.header-wrapper .nav-item {
+  margin: 0 10px;
+}
+
+.header-wrapper .nav-item .nav-link {
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-gray);
+  display: inline-block;
+}
+
+.header-wrapper .nav-item .nav-link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: var(--primary-color);
+  transition: 0.3s;
+}
+
+.header-wrapper .nav-item .nav-link.active,
+.header-wrapper .nav-item .nav-link:hover {
+  color: var(--text-dark);
+}
+
+.header-wrapper .nav-item .nav-link.active::after,
+.header-wrapper .nav-item .nav-link:hover::after {
+  width: 100%;
+}
